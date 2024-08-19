@@ -1,0 +1,2 @@
+export const SET_REDUXGLOBAL = "SET_REDUXGLOBAL";
+export const UPDATE_ITEM = "UPDATE_ITEM";
