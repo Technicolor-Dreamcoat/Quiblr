@@ -20,7 +20,7 @@
   <a href="#feature-spotlight">Feature Spotlight</a> •
   <a href="#additional-features">Additional Features</a> •
   <a href="#stack">Stack</a> •
-  <a href="#sponsor">Sponsor</a> •
+  <a href="#donate">Donate</a> •
   <a href="#contact">Contact</a> •
   <a href="#other-reads">Other Reads</a> •
   <a href="#license">License</a>
@@ -108,7 +108,7 @@ As you can see in the logic above, upvotes and downvotes are weighted equally wh
 - [Tabler](https://github.com/tabler/tabler-icons) - A vast library a beautiful icons
 - [Eld](https://github.com/nitotm/efficient-language-detector-js) - A fast and accurate language detector
 
-## Sponsor
+## Donate
 Quiblr is a labor of love, a passion project that I dedicate my evenings to. If you enjoy using Quiblr, consider buying me a coffee to support its continued development!
 
 <a href='https://ko-fi.com/J3J3KBRD6' target='_blank'>
