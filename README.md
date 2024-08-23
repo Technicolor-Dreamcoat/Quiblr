@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://quiblr.com"><img src="https://github.com/user-attachments/assets/5bbf9a26-2280-4356-9bc1-0c73f093e5e2" alt="Quiblr" width="200"></a>
+  <a href="https://quiblr.com"><img src="https://github.com/user-attachments/assets/3fd5ebf6-eb27-41cc-9b43-8be1b4c1881e" alt="Quiblr" width="200"></a>
   <br>
 </h1>
 
