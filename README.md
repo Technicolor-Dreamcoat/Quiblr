@@ -48,7 +48,7 @@ Whether you're looking to expand your social horizons or simply want a fresh, mo
 - **Prevent Bubbles:** While recommendation engines are great, there is always a risk of hindering diversity of thought and content. To help mitigate this, Quiblr always mixes in other _non-currated_ posts into the For You feed. This helps you discover new content that you may not have come across before 
 
 
-https://github.com/user-attachments/assets/38b16ecc-8e6e-499e-b812-645c52ac58af
+https://github.com/user-attachments/assets/5008e383-496e-4773-aacc-39fedc6b69db
 
 
 **🍀 Feeling Lucky:** One of the challenges in the Fediverse is the vastness of content, which can make it difficult for users to discover new and engaging posts. Quiblr's "Feeling Lucky" button addresses this by offering a simple and enjoyable way to explore random posts, allowing you to stumble upon interesting content that you might not have encountered otherwise.
