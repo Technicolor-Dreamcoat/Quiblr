@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { View, SafeAreaView } from "react-native";
+import { View } from "react-native";
 import { StateContext } from "../../../StateContext";
 import LeftBarList from "../../../sections/LeftBarList";
 import AllOverlays from "../../../overlays/AllOverlays";
@@ -22,7 +22,7 @@ const CommunityViewPage = ({ colors, route }) => {
   } = useContext(StateContext);
 
   return (
-    <SafeAreaView
+    <View
       style={{
         overflow: "hidden",
         flexGrow: 1,
@@ -64,7 +64,7 @@ const CommunityViewPage = ({ colors, route }) => {
           }
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 const mapStateToProps = (state) => {
