@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { View, ScrollView, TouchableOpacity } from "react-native";
+import { View, ScrollView, TouchableOpacity, Text } from "react-native";
 import { connect } from "react-redux";
 import withColorScheme from "../styles/Formatting";
 import { StateContext } from "../StateContext";
