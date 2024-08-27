@@ -12,6 +12,8 @@ import GenericButton from "../components/GenericButton";
 
 const AllOverlays = ({ styles, colors, showScrollBars }) => {
   const {
+    chosenFont_Bold,
+    chosenFont_ExtraBold,
     headerHeight,
     height,
     isPWA,
@@ -24,7 +26,9 @@ const AllOverlays = ({ styles, colors, showScrollBars }) => {
     pwaHeight,
     setPostDetail,
     setPressedShare,
+    setShowLearnMoreRemoveDuplicates,
     setShowSideDrawer,
+    showLearnMoreRemoveDuplicates,
     showSideDrawer,
     width,
   } = useContext(StateContext);
@@ -169,6 +173,96 @@ const AllOverlays = ({ styles, colors, showScrollBars }) => {
               </View>
             </ScrollView>
           </View>
+        </View>
+      </Overlay>
+
+      <Overlay //Remove Duplicates Overlay
+        isVisible={showLearnMoreRemoveDuplicates}
+        onBackdropPress={() => setShowLearnMoreRemoveDuplicates(false)}
+        fullScreen={false}
+        animationType={"fade"}
+        overlayStyle={[
+          styles.overlayMedium,
+          {
+            width: width >= 625 ? 350 : "100%",
+            borderRadius: overlayRadius,
+            minHeight: 200,
+            padding: 15,
+          },
+        ]}
+      >
+        {width < 625 && (
+          <XButton
+            functionAction={() => setShowLearnMoreRemoveDuplicates(false)}
+          />
+        )}
+        <View
+          style={{
+            flexDirection: "row",
+            gap: 10,
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+            borderBottomWidth: 2,
+            borderColor: colors.greyShade2,
+            padding: 5,
+          }}
+        >
+          <View
+            style={{
+              width: 35,
+              height: 35,
+              borderRadius: 5,
+              backgroundColor: colors.blueShade2,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <IconBoxMultiple2 size={26} stroke={1.3} color={colors.white} />
+          </View>
+          <Text style={styles.boldText}>Remove Duplicates</Text>
+        </View>
+        <View style={{ justifyContent: "center", flex: 1 }}>
+          <Text
+            style={{
+              color: colors.greyShade5,
+              fontFamily: chosenFont_Bold,
+              fontSize: 13,
+            }}
+          >
+            Remove posts that have the{" "}
+            <Text
+              style={{
+                color: colors.black,
+                fontFamily: chosenFont_ExtraBold,
+                fontSize: 13,
+              }}
+            >
+              same title
+            </Text>{" "}
+            and are from the{" "}
+            <Text
+              style={{
+                color: colors.black,
+                fontFamily: chosenFont_ExtraBold,
+                fontSize: 13,
+              }}
+            >
+              same author
+            </Text>
+            .
+          </Text>
+          <Text
+            style={{
+              color: colors.greyShade5,
+              fontFamily: chosenFont_Bold,
+              fontSize: 13,
+              paddingTop: 10,
+            }}
+          >
+            The first duplicate post is kept in the feed and the others are
+            removed.
+          </Text>
         </View>
       </Overlay>
     </View>
