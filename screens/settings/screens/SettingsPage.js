@@ -6,6 +6,7 @@ import {
   ScrollView,
   Modal,
   Platform,
+  Pressable
 } from "react-native";
 import { useEffect, useState } from "react";
 import { updateItem } from "../../../redux/actions";
@@ -38,6 +39,8 @@ const SettingsPage = ({
   flipVotingArrows,
 }) => {
   const {
+    chosenFont_Bold,
+    chosenFont_ExtraBold,
     dispatch,
     IconArrowNarrowUp,
     IconArrowsMoveVertical,
@@ -45,6 +48,7 @@ const SettingsPage = ({
     IconBlur,
     IconExternalLink,
     IconHandStop,
+    IconInfoCircle,
     IconLayoutSidebarRightCollapse,
     IconMoon,
     IconTextSize,
@@ -53,12 +57,14 @@ const SettingsPage = ({
     IconVolume,
     isPWA,
     jwt,
+    setShowLearnMoreRemoveDuplicates,
     width,
   } = useContext(StateContext);
   const navigation = useNavigation();
 
   const [fontSize, setFontSize] = useState(reduxFontSize);
   const [canGoBack, setCanGoBack] = useState(false);
+  const [removeDuplicatesHovering, setRemoveDuplicatesHovering] = useState(false);
 
   // Listen to navigation events to update the state
   useFocusEffect(
@@ -742,7 +748,7 @@ const SettingsPage = ({
                 borderWidth: 2,
               }}
             >
-              <View //Remove duplicates
+             <View //Remove duplicates
                 style={[
                   styles.centeredRow,
                   styles.backgroundColor,
@@ -790,7 +796,88 @@ const SettingsPage = ({
                     },
                   ]}
                 >
-                  <Text style={styles.boldText}>Remove Duplicates</Text>
+                  <View style={{ flexDirection: "row", gap: 5 }}>
+                    <Text style={styles.boldText}>Remove Duplicates</Text>
+                    <Pressable
+                      onHoverIn={() => setRemoveDuplicatesHovering(true)}
+                      onHoverOut={() => setRemoveDuplicatesHovering(false)}
+                      onPress={() =>
+                        width > 1100
+                          ? console.log
+                          : setShowLearnMoreRemoveDuplicates(true)
+                      }
+                    >
+                      <IconInfoCircle
+                        size={20}
+                        stroke={2}
+                        color={
+                          removeDuplicatesHovering
+                            ? colors.blueShade2
+                            : colors.greyShade3
+                        }
+                      />
+                    </Pressable>
+                    {removeDuplicatesHovering && width > 1100 && (
+                      <View
+                        style={{
+                          backgroundColor: colors.greyShade1,
+                          borderWidth: 3,
+                          borderColor: colors.greyShade2,
+                          borderRadius: 10,
+                          position: "absolute",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          padding: 10,
+                          zIndex: 100,
+                          bottom: 25,
+                          minWidth: 250,
+                          minHeight: 125,
+                          left: 90,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            color: colors.greyShade5,
+                            fontFamily: chosenFont_Bold,
+                            fontSize: 13,
+                          }}
+                        >
+                          Remove posts that have the{" "}
+                          <Text
+                            style={{
+                              color: colors.black,
+                              fontFamily: chosenFont_ExtraBold,
+                              fontSize: 13,
+                            }}
+                          >
+                            same title
+                          </Text>{" "}
+                          and are from the{" "}
+                          <Text
+                            style={{
+                              color: colors.black,
+                              fontFamily: chosenFont_ExtraBold,
+                              fontSize: 13,
+                            }}
+                          >
+                            same author
+                          </Text>
+                          .
+                        </Text>
+                        <Text
+                          style={{
+                            color: colors.greyShade5,
+                            fontFamily: chosenFont_Bold,
+                            fontSize: 13,
+                            paddingTop: 10,
+                          }}
+                        >
+                          The first duplicate post is kept in the feed and the
+                          others are removed.
+                        </Text>
+                      </View>
+                    )}
+                  </View>
                   <Toggle
                     value={removeDuplicatePosts}
                     containerStyle={{ width: 50 }}
