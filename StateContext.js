@@ -249,6 +249,7 @@ export function StateProviderUnconnected({
   const [comments, setComments] = useState(null);
   const [viewedViaFeelingLucky, setViewedViaFeelingLucky] = useState(false);
   const [noFrontPagePostResults, setNoFrontPagePostResults] = useState(false);
+  const [showLearnMoreRemoveDuplicates, setShowLearnMoreRemoveDuplicates] = useState(false);
   //############################################
   //            Show/Hide Content             //
   //############################################
@@ -3089,6 +3090,7 @@ export function StateProviderUnconnected({
         setShowAbout,
         setShowEditPost,
         setShowingResults,
+        setShowLearnMoreRemoveDuplicates,
         setShowLuckyTooltip,
         setShowPostActivity,
         setShowSearch,
@@ -3101,6 +3103,7 @@ export function StateProviderUnconnected({
         setWritePost,
         showEditPost,
         showingResults,
+        showLearnMoreRemoveDuplicates,
         showLuckyTooltip,
         showPostActivity,
         showSearch,
