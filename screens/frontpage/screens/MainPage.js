@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { View, Platform, SafeAreaView } from "react-native";
+import { View, Platform } from "react-native";
 import { StateContext } from "../../../StateContext";
 import SearchDropdownSection from "../../search/components/SearchDropdownSection";
 import LeftBarList from "../../../sections/LeftBarList";
@@ -49,7 +49,7 @@ const MainPage = ({ colors, sort, listing, instance, showNSFWSettings }) => {
   //                  Render                  //
   //############################################
   return (
-    <SafeAreaView
+    <View
       style={{
         flexGrow: 1,
         maxHeight: height,
@@ -74,7 +74,7 @@ const MainPage = ({ colors, sort, listing, instance, showNSFWSettings }) => {
         <LeftBarList active={"Home"} />
         <PostsSection />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 const mapStateToProps = (state) => {
