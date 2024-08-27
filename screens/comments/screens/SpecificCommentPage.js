@@ -12,7 +12,6 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Pressable,
-  SafeAreaView,
 } from "react-native";
 import { Image } from "expo-image";
 import { updateItem } from "../../../redux/actions";
@@ -459,7 +458,7 @@ const SpecificCommentPage = ({
   };
   if (!post || loading) {
     return (
-      <SafeAreaView
+      <View
         scrollEnabled={false}
         style={[
           {
@@ -485,11 +484,11 @@ const SpecificCommentPage = ({
             <CommentsPlaceholders />
           </View>
         </View>
-      </SafeAreaView>
+      </View>
     );
   } else {
     return (
-      <SafeAreaView
+      <View
         scrollEnabled={false}
         style={[
           styles.mainPage_Container,
@@ -1821,7 +1820,7 @@ const SpecificCommentPage = ({
 
           <BlankBarSection />
         </View>
-      </SafeAreaView>
+      </View>
     );
   }
 };
