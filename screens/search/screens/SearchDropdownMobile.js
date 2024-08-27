@@ -8,7 +8,6 @@ import {
   ScrollView,
   TextInput,
   Pressable,
-  SafeAreaView,
 } from "react-native";
 import { Image } from "expo-image";
 import ItemSeparator from "../../../items/components/ItemSeparator";
@@ -464,7 +463,7 @@ const SearchDropdownMobile = ({ colors, styles, instance, showScrollBars }) => {
     searchText?.trim().length > 0 && fetchSearchCommunities(searchText);
   }, [searchText]);
   return (
-    <SafeAreaView style={{ backgroundColor: colors.white }}>
+    <View style={{ backgroundColor: colors.white }}>
       <ScrollView
         ref={scrollViewRef}
         showsVerticalScrollIndicator={false}
@@ -635,7 +634,7 @@ const SearchDropdownMobile = ({ colors, styles, instance, showScrollBars }) => {
           />
         )}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 const mapStateToProps = (state) => {
