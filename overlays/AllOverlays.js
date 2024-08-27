@@ -16,6 +16,7 @@ const AllOverlays = ({ styles, colors, showScrollBars }) => {
     chosenFont_ExtraBold,
     headerHeight,
     height,
+    IconBoxMultiple2,
     isPWA,
     jwt,
     overlayHeight,
