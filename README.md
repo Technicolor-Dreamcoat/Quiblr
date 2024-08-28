@@ -53,7 +53,7 @@ https://github.com/user-attachments/assets/5008e383-496e-4773-aacc-39fedc6b69db
 
 **🍀 Feeling Lucky:** One of the challenges in the Fediverse is the vastness of content, which can make it difficult for users to discover new and engaging posts. Quiblr's "Feeling Lucky" button addresses this by offering a simple and enjoyable way to explore random posts, allowing you to stumble upon interesting content that you might not have encountered otherwise.
 
-Big shoutout to [Rooki](https://quiblr.com/instance/lemmy.world/user/lemmy.world/Rooki) for this feature idea!
+Big shoutout to [@Rooki@lemmy.world](https://lemmy.world/u/Rooki) for this feature idea!
 
 **📈 Post Peformance Insights:** Fediverse apps tend to lack the ability to provide the same level of visibility into how your posts are performing as mainstream social media apps. To address this, I built a [solution](https://quiblr.com/post_activity) that gives a directional sense of how _active_ your posts are. It does this by using the upvotes, downvotes, comments, and age of the post. The logic is as follows:
 ```
