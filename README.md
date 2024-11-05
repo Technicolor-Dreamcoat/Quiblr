@@ -120,6 +120,7 @@ Do you have questions, feedback, or just want to get in touch? Use the [Quiblr f
 
 ## Other Reads
 - [Quiblr - The Fediverse and YOU!](https://quiblr.com/the_fediverse_and_you)
+- [FediForum - Live Quiblr Demo](https://fediforum.org/2024-09/)
 - [TechCrunch - Why Meta is looking to the fediverse as the future for social media](https://techcrunch.com/2024/04/25/why-meta-is-looking-to-the-fediverse-as-the-future-for-social-media/)
 - [Flipboard - Flipboard Begins to Federate](https://about.flipboard.com/inside-flipboard/flipboard-begins-to-federate/)
 - [Ghost - It’s time to bring back the open web](https://activitypub.ghost.org/)
